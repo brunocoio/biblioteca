@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>promises-multiplas</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    const currency = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({currency: 'euro', value: 3.50});
+      }, 2000);
+    });
+
+    const countries = new Promise((resolve, reject) =>{
+        resolve(['ireland', 'england', 'scotland']);
+    });
+
+    Promise
+      //.all forca xecutar todas as promisses para executar os comandos, assim e executado tudo 'junto' ordenando pelo maior tempo de execucao
+      .all([currency, countries])
+      //.race executa a primeira resposta e para o resto (quem responder primeiro)
+      //.race([currency, countries])
+      .then(responses =>{
+        console.log(responses);
+      });
+
+  </script>
+</html>

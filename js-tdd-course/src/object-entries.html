@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>object-entries</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    const animals = {
+      camel: 3,
+      llama: 2,
+      alpaca: 5,
+    };
+
+    console.log(Object.entries(animals));
+
+    const animalsMap = new Map(Object.entries(animals));
+    console.log(animalsMap.size);
+    console.log(animalsMap.has('llama'));
+    console.log(animalsMap.get('alpaca'));
+  </script>
+</html>

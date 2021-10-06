@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>generators-ajax</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+
+    function ajax(url) {
+      fetch(url)
+      .then(data => data.json())
+      .then(data => dados.next(data));
+    }
+
+    //https://willianjusten.com.br/search.json
+    //https://api.github.com/users/willianjusten
+
+    function* ajaxGen(){
+      console.log('buscando site');
+      const posts = yield ajax('https://willianjusten.com.br/search.json');
+      console.log(posts);
+
+      console.log('buscando git');
+      const github = yield ajax('https://api.github.com/users/willianjusten');
+      console.log(github);
+    }
+
+    const dados = ajaxGen();
+
+    dados.next();
+
+  </script>
+</html>

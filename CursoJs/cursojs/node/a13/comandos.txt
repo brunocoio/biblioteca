@@ -1,0 +1,15 @@
+acessar pasta
+npm install
+npm init -y
+npm install express --sav-dev
+npm install nodemon --save-dev
+npx nodemon server.js
+
+no arquivo package.json inserir o comando e efetuar o comando via terminal
+"start": "nodemon server.js" (npm start)
+depois pausar com control + c
+
+//
+
+instalar ejs
+npm i ejs

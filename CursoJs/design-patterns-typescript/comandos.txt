@@ -1,0 +1,17 @@
+npm init -y
+
+npm i typescript -D
+
+--criar arquivo tsconfig.json
+
+--criar pasta src e gerar comando no terminar npx tsc para gerar a estrutura de pasta
+
+npm i -D ts-node
+--criar pasta .vscode
+--{  "code-runner.executorMap"} -- o vs vai aplicar varias linhas
+
+--criar arquivo .eslintrc.js
+
+npm i -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-config-prettier eslint-plugin-prettier
+
+--criar arquivo .prettierrc.js

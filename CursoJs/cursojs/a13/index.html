@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="index.js"></script>
+    <script>
+        const nome = prompt('digite nome');
+        document.body.innerHTML =`seu nome é ${nome}<br />`;
+        document.body.innerHTML +=`tem ${nome.length} letras <br />`;
+        document.body.innerHTML +=`segunda letra do seu nome é ${nome.charAt(1)} <br />`;
+        document.body.innerHTML +=`primeiro indice r do seu nome é ${nome.indexOf('r')} <br />`;
+        document.body.innerHTML +=`ultimo indice do seu nome é ${nome.lastIndexOf('r')} <br />`;
+        document.body.innerHTML +=`3 ultimas letras do seu nome sao ${nome.slice(-3)} <br />`;
+        document.body.innerHTML +=`palavras do seu nome sao ${nome.split(' ')} <br />`;
+        //console.log(`${nome}`);
+    </script>
+</body>
+</html>

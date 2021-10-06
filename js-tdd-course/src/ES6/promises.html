@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>promises</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+
+    var defer = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if(true){
+          resolve('ok');
+        }else{
+          reject('nok');
+        }
+      }, 2000);
+    });
+    //quando finalizar faca
+    defer
+      //then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        return 'foo';
+      })
+      .then((data) => console.log(data))
+      //tratar erro
+      .catch((err) => console.log(err));
+
+  </script>
+</html>

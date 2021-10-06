@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>async-await</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    //aplicacao 1
+    // var posts = fetch('https://willianjusten.com.br/search.json');
+    // posts
+    //   .then(data => data.json())
+    //   .then(data => data.map(post =>{
+    //     console.log(post.title);
+    //   }));
+
+    //aplicacao 2
+    // function getPosts() {
+    //   return fetch('https://willianjusten.com.br/search.json')
+    //     .then(data => data.json())
+    //     .then(data => data.map(post =>{
+    //       console.log(post.title);
+    //     }));
+    // }
+
+    //aplicacao 3
+    async function getPosts() {
+      const response = await fetch('https://willianjusten.com.br/search.json');
+      const data = await response.json();
+
+      return data.map(post =>{
+        console.log(post.title);
+      })
+    }
+    getPosts();
+  </script>
+</html>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --redlight: #f8d7da;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --yellowlight: #fff3cd;
+    --green: #28a745;
+    --greenlight: #d4edda;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --cyanlight: #d1ecf1;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+* {
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--info);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: var(--dark);
+}
+
+.container {
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: var(--light);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/**/
+
+form input,
+form label,
+form button {
+    margin: 5px 0;
+    vertical-align: middle;
+    display: flex;
+}
+
+form input {
+    padding: 5px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+
+form input:focus {
+    border: 1px solid var(--cyan);
+    outline: var(--cyan);
+}
+
+form button {
+    background: var(--light);
+    border-style: none;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+form button:hover {
+    background: var(--dark);
+}
+
+button {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+}
+
+button:hover,
+button.hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+button:focus,
+button.focus {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+    box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+button:disabled,
+button.disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+button:not(:disabled):not(.disabled):active,
+button:not(:disabled):not(.disabled).active,
+.show>button.dropdown-toggle {
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b;
+}
+
+button:not(:disabled):not(.disabled):active:focus,
+button:not(:disabled):not(.disabled).active:focus,
+.show>button.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+
+/**/
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/**/
+
+ul.listapadrao {
+    margin: 0;
+    padding: 0;
+}
+
+ul.listapadrao>ol,
+ul.listapadrao>li {
+    margin: 0;
+    padding: 0;
+}
+
+
+/**/
+
+.success {
+    background: var(--greenlight);
+    color: var(--green);
+}
+
+.info {
+    background: var(--cyanlight);
+    color: var(--cyan);
+}
+
+.warning {
+    background: var(--yellowlight);
+    color: var(--yellowlight);
+}
+
+.danger {
+    background: var(--redlight);
+    color: var(--red);
+}
+
+
+/**/
+
+table {
+    width: 100%;
+}

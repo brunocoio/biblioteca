@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>heranca-prototipal</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    //funcao construtora - classe
+    function Animal(kind, sound) {
+      //constructor
+      this.kind = kind;
+      this.sound = sound;
+    }
+    //metodo
+    Animal.prototype.hello = function(){
+      console.log(`${this.sound} i'm a ${this.kind}!`);
+    }
+
+    const dog = new Animal('dog', 'auau');
+
+    const cat = new Animal('cat', 'miau');
+
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>array-find-findindex</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    const data = [
+      {
+        name: 'nome',
+        age: 30,
+        city: 'cidade'
+      }
+      ,
+      {
+        name: 'nome2',
+        age: 32,
+        city: 'cidade2'
+      }
+    ];
+
+    //const sampleArray = [4, -5, 0, -1];
+    //traz o 1 registro achado
+    //const underZero = sampleArray.find(x => x < 0);
+    //tras indice
+    //const underZeroIndex = sampleArray.findIndex(x => x < 0);
+
+    //console.log(underZero);
+    //console.log(underZeroIndex);
+
+    const reg1 = data.find(person => person.name === 'nome');
+    const reg2 = data.findIndex(person => person.name === 'nome2');
+    console.log(reg1);
+    console.log(reg2);
+
+  </script>
+</html>

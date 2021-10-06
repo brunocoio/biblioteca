@@ -1,0 +1,41 @@
+npx sequelize migration:create --name=alunos
+criou dentro de database migrations um script para criar tabela via script
+
+npx sequelize db:migrate
+gera a tabela via comando
+
+//criar novos usuarios
+
+npx sequelize seed:generate --name criar-usuarios
+
+npx sequelize db:seed:all
+
+//altera email
+sequelize migration:create --name=mudar-email-aluno-unique
+npx sequelize db:migrate
+
+//momulterlder upload
+npm i multer
+
+//criar tabela relacional
+
+npx sequelize migration:create --name=criar-tabela-de-foto-do-aluno
+npx sequelize db:migrate
+
+//gerar build
+npm run build
+
+
+/**/
+34.95.200.37
+
+$ eval $(ssh-agent)
+
+
+$ ssh-add ~/.ssh/id_rsa
+
+
+$ ssh-keygen -t rsa -C "web.bruno@gmail.com"
+
+ssh web.bruno@34.95.200.37
+/**/

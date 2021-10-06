@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>heranca-extends</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    //classe
+    class Animal{
+      //construtor
+      constructor(name){
+        this.name = name;
+      }
+      //metodo
+      hello(){
+        console.log(`I'm ${this.name}!`);
+      }
+    }
+    //classe
+    class Dog extends Animal{
+      //construtor
+      constructor(sound){
+        //o super se aplica para herdar o constructor da classe
+        super(name);
+        this.sound = sound;
+      }
+      bark(){
+        console.log(`${this.sound} I'm ${this.name}!`);
+      }
+    }
+
+    const elephant = new Animal('Dumbo');
+    //aplicacao de heranca de classe
+    const dog = new Dog('nome' ,'barulho');
+
+  </script>
+</html>

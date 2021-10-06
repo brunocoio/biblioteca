@@ -1,0 +1,53 @@
+acessar pasta
+npm install
+npm init -y
+npm install express --sav-dev
+npm install nodemon --save-dev
+npx nodemon server.js
+
+no arquivo package.json inserir o comando e efetuar o comando via terminal
+"start": "nodemon server.js" (npm start)
+depois pausar com control + c
+
+//
+
+instalar ejs
+npm i ejs
+
+npm i validator
+
+//
+retirar envio de senhas
+npm install dotenv
+
+//
+modelagem de dados
+npm install mongoose
+
+npm i bcryptjs
+
+npm i express-session connect-mongo connect-flash
+
+//
+^     minor patch
+
+2.    1.    0
+major minor patch
+
+2.1.1
+2.2.0
+3.0.0
+
+npm install
+npm uninstall
+npm update
+npm outdated (descobrir pacotes desatualizados)
+
+npm install pacote@4.x (4 = versão mais atual)
+
+/**/
+ao iniciar
+npm i
+npm init -y
+npm start
+npm run dev

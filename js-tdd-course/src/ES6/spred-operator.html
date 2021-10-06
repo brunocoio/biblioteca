@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>spred-operator</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    let front = ['react', 'vue', 'angular'];
+    let back = ['python', 'ruby', 'nodejs'];
+    //quebra o valor em elementos individuais  (...)
+    console.log([...'nome']);
+    console.log(...'nome');
+    console.log(...front);
+
+    //concatenar padrao
+    // let fullStack = front.concat(back);
+    // console.log(fullStack);
+
+    //adicionar registro
+    // let fullStack = [];
+    // fullStack = fullStack.concat(front);
+    // fullStack.push('RxJs');
+    // fullStack = fullStack.concat(back);
+    // console.log(fullStack);
+
+    //novo meio de concatenacao
+    let fullStack = [...front, 'RxJs', ...back];
+    // console.log(fullStack);
+
+  </script>
+</html>

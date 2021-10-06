@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>object-values</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    const animals = {
+      camel: 3,
+      llama: 2,
+      alpaca: 5,
+    };
+    //traz o valor dos campos
+    console.log(Object.values(animals));
+    //traz a soma dos valores
+    console.log("Total de animais: ", Object.values(animals).reduce((a, b) => a + b));
+
+  </script>
+</html>

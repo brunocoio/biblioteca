@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>symbol</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    //symbol é um item unico
+    let foo = Symbol('name');
+    let bar = Symbol('name');
+
+    // console.log(foo == bar);
+
+    let obj = {
+      [Symbol('name')]: 'nome',
+      [Symbol('age')]: 30,
+      city: 'cidade'
+    }
+    //ao tentar dar print nao sera possivel apresentar todos os elementos pois ha symbols
+    //console.log(Object.keys(obj));
+
+    const symbols = Object.getOwnPropertySymbols(obj);
+    const data = symbols.map(sym => obj[sym]);
+    console.log(data);
+
+  </script>
+</html>

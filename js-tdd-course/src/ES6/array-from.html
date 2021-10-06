@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>array-from</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>nome</li>
+      <li>sobrenome</li>
+    </ul>
+  </body>
+  <script type="text/javascript">
+    //const text = 'nome';
+    //separa a palavra transformando cada letra em array
+    //console.log(Array.from(text));
+    //transforma o ul em array as náo obtem a informacao de dentro do li
+    const list = document.querySelectorAll('#list li');
+    //transfora o ul em array multi com propriedades e dependencias, lembrando que e necessario gerar o list acima
+    const listArray = Array.from(list);
+    //console.log(listArray);
+    //textContent é uma propriedade herdada do array
+    const names = listArray.map((name) => name.textContent);
+    console.log(names);
+  </script>
+</html>

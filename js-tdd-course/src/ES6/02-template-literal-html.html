@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>02-template-literal-html</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    const article={
+      title:'titulo de aplicacao',
+      intro:'subtitulo ou sinopse',
+      body:'conteudo de corpo',
+      tags:['js','javascript','es6'],
+      author:'curso'
+    }
+
+    function renderAuthor(name){
+      return(name)? name : 'sem autor';
+    }
+
+    //aplicar dentro do template o conteúdo
+    //map percorre os objetos
+    //join une/concatena os arrays do objeto
+    const markup = `
+      <article>
+        <header>
+          <h1>${article.title}</h1>
+        </header>
+        <section>
+          <p>${article.intro}</p>
+        </section>
+        <footer>
+          <ul>
+            ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+          </ul>
+          <p>Author: ${renderAuthor(article.author)}</p>
+        </footer>
+      </article>
+    `;
+    //importa o conteúdo dentro do body
+    document.body.innerHTML = markup;
+  </script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>weakset</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    let obj1 = {
+      name: 'nome1',
+      age: 30
+    };
+
+    let obj2 = {
+      name: 'nome2',
+      age: 32
+    };
+    //nao aceita tipos primitivos
+    let ws = new WeakSet([obj1, obj2]);
+    console.log(ws.has(obj1));//true
+
+
+    ws.add({type: 'obj'});
+    ws.delete(obj1);
+    //nao visualiza values e náo funcional com for of, nao sendo interator
+  </script>
+</html>

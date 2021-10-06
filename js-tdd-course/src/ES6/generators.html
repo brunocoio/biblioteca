@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>generators</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    // function genNames() {
+    //   console.log('nome 1');
+    //   console.log('nome 2');
+    //   console.log('nome 3');
+    // }
+    //genNames();
+
+    function* genNames() {
+      //yield é um return sem o break/die, ele retorna até o ultimo registro conforme chamada
+      yield 'nome 1';
+      yield 'nome 2';
+      yield 'nome 3';
+    }
+
+    const names = genNames();
+    //apresenta o objeto
+    //console.log(names.next());
+    //apresenta o valor do 1 objeto, para apresentar os outros e necessario executar o consolelog mais uma vez ou abrir um map
+    console.log(names.next().value);
+
+  </script>
+</html>

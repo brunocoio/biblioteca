@@ -1,0 +1,45 @@
+<%- include('includes/head') %>
+    <%- include('includes/nav') %>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 my-3">
+                    <h1 class="text-center">Agenda</h1>
+                    <p class="text-center lead">Contatos</p>
+
+                    <%- include('includes/messages');%>
+
+                        <div class="col-lg">
+                            <h4>Cadastro</h4>
+                            <% if(contato._id){%>
+                                <form action="/contato/edit/<%=contato._id%>" method="POST">
+                                    <%}else{%>
+                                        <form action="/contato/register" method="POST">
+                                            <%}%>
+
+                                                <div class="mb-3">
+                                                    <label for="CadastroNome" class="form-label">Nome</label>
+                                                    <input type="text" name="nome" class="form-control" id="CadastroNome" value="<%=contato.nome %>">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="CadastroSobrenome" class="form-label">Sobrenome</label>
+                                                    <input type="text" name="sobrenome" class="form-control" id="CadastroSobrenome" value="<%=contato.sobrenome %>">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="CadastroEmail" class="form-label">Email</label>
+                                                    <input type="email" name="email" class="form-control" id="CadastroEmail" value="<%=contato.email %>">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="CadastroTelefone" class="form-label">Telefone</label>
+                                                    <input type="tel" name="telefone" class="form-control" id="CadastroTelefone" value="<%=contato.telefone %>">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Salvar</button>
+                                                <input type="hidden" name="_csrf" value=<%=csrfToken %>>
+                                        </form>
+                        </div>
+
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <%- include('includes/footer') %>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>destructuring</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    var data = {
+      name: 'nome',
+      surname: 'sobrenome',
+      age: 30,
+      blog: 'url',
+      social: {
+        twitter: '@endereco',
+        facebook: '/endereco'
+      }
+    };
+    //forma padrao de atribuir a variavel
+    // const name =  data.name;
+    // const twitter = data.social.twitter;
+    // console.log(name);
+    // console.log(twitter);
+
+    //aplicando com destructuring
+    const {name} = data;
+    console.log(name);
+
+    const {facebook} = data.social;
+    console.log(facebook);
+    //aplicando uma nova variável/nomenclatura
+    const {facebook: fb} = data.social;
+    console.log(fb);
+    //criando um valor padrao caso nao tenha no objeto
+    const {city = 'cidade'} = data;
+    console.log(city);
+
+  </script>
+</html>

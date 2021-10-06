@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charSet="utf-8"/>
+    <title>async-await-erros-promisses</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    async function getUsers(users) {
+      const promises = users.map(user => fetch(`https://api.github.com/users/${user}`) .then(response => response.json()));
+
+      const people = await Promise.all(promises);
+      console.log(people.map(p => p.name));
+    }
+
+    getUsers(['willianjusten', 'guilouro', 'brunocoio']);
+  </script>
+</html>

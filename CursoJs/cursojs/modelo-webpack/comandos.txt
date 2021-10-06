@@ -1,0 +1,14 @@
+npm init -y
+
+npm i --save-dev @babel/preset-env @babel/core @babel/cli babel-loader webpack webpack-cli regenerator-runtime core-js@2
+
+.gitignore
+node_modules
+
+webpack.config.js
+
+efetuar configs do webpack
+executar comando npm run 'dev' para gerar o bundle
+
+npm i style-loader css-loader
+executar comando npm run 'dev' 
