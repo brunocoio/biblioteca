@@ -1,0 +1,12 @@
+//instalar
+composer create-project --prefer-dist laravel/laravel cursoLaravel 5.3
+
+cd ./cursoLaravel
+
+php artisan serve
+
+//criar página
+//routes - web
+
+//gerar nova chave
+php artisan key:generate
