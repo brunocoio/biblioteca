@@ -10,3 +10,6 @@ php artisan serve
 
 //gerar nova chave
 php artisan key:generate
+
+//gera controller
+php artisan make:controller ContatoController
