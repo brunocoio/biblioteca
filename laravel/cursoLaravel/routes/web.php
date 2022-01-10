@@ -1,15 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
+/* |-------------------------------------------------------------------------- | Web Routes |-------------------------------------------------------------------------- | | This file is where you may define all of the routes that are handled | by your application. Just tell Laravel the URIs it should respond | to using a Closure or controller method. Build something great! | */
 
 // /contato/{id?} o ? define não obrigatório
 // Route::get('/contato/{id?}', function($id = null) {
@@ -30,10 +21,10 @@
 
 //GET
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 //com controller
-Route::get('/contato/{id?}', ['uses' =>'ContatoController@index']);
-Route::post('/contato', ['uses' =>'ContatoController@criar']);
-Route::put('/contato', ['uses' =>'ContatoController@editar']);
+Route::get('/contato/{id?}', ['uses' => 'ContatoController@index']);
+Route::post('/contato', ['uses' => 'ContatoController@criar']);
+Route::put('/contato', ['uses' => 'ContatoController@editar']);
