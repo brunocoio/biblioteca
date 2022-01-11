@@ -1,11 +1,5 @@
-<html>
+@include('layout._includes.topo')
 
-<head>
-  <title>@yield('titulo')</title>
-</head>
+@yield('conteudo')
 
-<body>
-
-</body>
-
-</html>
+@include('layout._includes.footer')
