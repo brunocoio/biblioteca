@@ -16,3 +16,31 @@ php artisan make:controller ContatoController
 
 //criar model
 php artisan make:model Contato -m
+
+//criar migration
+php artisan make:migration create_produtos_table --create=produtos
+
+// aplicação de tabelas no banco de dados
+php artisan migrate
+
+//reseta comando migrate //roolback
+php artisan migrate:reset
+
+//eloquente para popular tabela - tinker
+php artisan tinker
+//listar registros
+App\Contato::all();
+//gera registros
+$contato = new App\Contato();
+$contato->nome = "Guilherme";
+$contato->telefone = "5456";
+$contato->email = "em@ail.com";
+
+$contato;
+//após gerar o array, para gerar o registro no banco, efetuar o save
+$contato->save();
+
+//deletar registro
+
+$con = App\Contato::find(1);
+$con->delete();
