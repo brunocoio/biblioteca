@@ -2,12 +2,14 @@
 
 @section('titulo','Contatos')
 
-
 @section('conteudo')
-<h3>View index</h3>
+    <h3>Essa é a view Index</h3>
 
-@foreach($contatos as $contato)
-<p>{{$contato->nome}}</p>
-<p>{{$contato->tel}}</p>
-@endforeach
+    @foreach($contatos as $contato)
+        <p>{{ $contato->nome }}</p>
+        <p>{{ $contato->tel }}</p>
+
+    @endforeach
+
 @endsection
+

@@ -1,30 +1,29 @@
 <?php
 
-/* |-------------------------------------------------------------------------- | Web Routes |-------------------------------------------------------------------------- | | This file is where you may define all of the routes that are handled | by your application. Just tell Laravel the URIs it should respond | to using a Closure or controller method. Build something great! | */
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| This file is where you may define all of the routes that are handled
+| by your application. Just tell Laravel the URIs it should respond
+| to using a Closure or controller method. Build something great!
+|
+*/
 
-// /contato/{id?} o ? define não obrigatório
-// Route::get('/contato/{id?}', function($id = null) {
-//     return"Contato id = $id";
-// });
-
-// POST
-// Route::post('/contato', function() {
-//     //var_dump($_POST);
-//     dd($_POST);
-//     return"Contato POST";
-// });
-
-// PUT (para edição)
-// Route::put('/contato', function() {
-//     return"Contato PUT";
-// });
-
-//GET
 Route::get('/', function () {
-  return view('welcome');
+    return view('welcome');
 });
 
-//com controller
-Route::get('/contato/{id?}', ['uses' => 'ContatoController@index']);
-Route::post('/contato', ['uses' => 'ContatoController@criar']);
-Route::put('/contato', ['uses' => 'ContatoController@editar']);
+Route::get('/contato/{id?}',['uses'=>'ContatoController@index']);
+
+Route::post('/contato',['uses'=>'ContatoController@criar']);
+
+Route::put('/contato',['uses'=>'ContatoController@editar']);
+
+Route::get('/admin/cursos',['as'=>'admin.cursos','uses'=>'Admin\CursoController@index']);
+Route::get('/admin/cursos/adicionar',['as'=>'admin.cursos.adicionar','uses'=>'Admin\CursoController@adicionar']);
+Route::post('/admin/cursos/salvar',['as'=>'admin.cursos.salvar','uses'=>'Admin\CursoController@salvar']);
+Route::get('/admin/cursos/editar/{id}',['as'=>'admin.cursos.editar','uses'=>'Admin\CursoController@editar']);
+Route::put('/admin/cursos/atualizar/{id}',['as'=>'admin.cursos.atualizar','uses'=>'Admin\CursoController@atualizar']);
+Route::get('/admin/cursos/deletar/{id}',['as'=>'admin.cursos.deletar','uses'=>'Admin\CursoController@deletar']);

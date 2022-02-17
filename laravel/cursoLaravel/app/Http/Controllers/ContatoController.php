@@ -3,33 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
 use App\Contato;
 
 class ContatoController extends Controller
 {
-  public function index()
-  {
-    $contatos = [
-      (object)["nome" => "maria", "tel" => "123456789"],
-      (object)["nome" => "manoel", "tel" => "654987321"],
-    ];
+    public function index()
+    {
 
-    $contato = new Contato();
-    //dd($contato->lista());
-    $conn = $contato->lista();
-    dd($conn->nome);
+        $contatos = [
+            (object)["nome"=>"Maria","tel"=>"6564773"],
+            (object)["nome"=>"Pedro","tel"=>"6444444"]
+        ];
 
-    // return "index ContatoController";
-    return view('contato.index', compact('contatos'));
-  }
-  public function criar(Request $reg)
-  {
-    // dd($reg['nome']);
-    dd($reg->all());
-    return "criar ContatoController";
-  }
-  public function editar()
-  {
-    return "editar ContatoController";
-  }
+        $contato = new Contato();
+        $con = $contato->lista();
+        dd($con->nome);
+
+
+        return view('contato.index',compact('contatos'));
+    }
+    public function criar(Request $req)
+    {
+        dd($req->all());
+        return "Esse é o Criar do ContatoController";
+    }
+    public function editar()
+    {
+        return "Esse é o Editar do ContatoController";
+    }
 }

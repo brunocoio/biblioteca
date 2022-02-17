@@ -44,3 +44,15 @@ $contato->save();
 
 $con = App\Contato::find(1);
 $con->delete();
+
+/**/
+//CRUD
+
+//gera model
+php artisan make:model Curso -m
+
+php artisan migrate
+
+//controller
+php artisan make:controller Admin\CursoController
+//criar rota
