@@ -46,6 +46,7 @@ $con = App\Contato::find(1);
 $con->delete();
 
 /**/
+/**/
 //CRUD
 
 //gera model
@@ -56,3 +57,28 @@ php artisan migrate
 //controller
 php artisan make:controller Admin\CursoController
 //criar rota
+
+/**/
+/**/
+gerar login
+//gerar rota e página
+//controller
+php artisan make:controller Site\HomeController
+
+/**/
+seeder
+*database
+
+php artisan make:seed UsuarioSeeder
+
+//executa todas seeders
+php artisan db:seed
+
+//executa seeder específica
+php artisan db:seed --class=UsuarioSeeder
+
+//gera login pelo laravel com bootstrap
+make:auth
+
+//era login manualmente
+php artisan make:controller Site\LoginController
