@@ -1,0 +1,52 @@
+//cria imagem
+docker run -it ubuntu
+
+//verifica imagem rodando
+docker ps
+
+//verifica imagens que ja rodaram
+docker ps -a
+
+//rodar imagem por traz
+docker run -d ubuntu
+
+//para imagem tras
+docker stop ID 
+
+//iniciar imagem ja existente
+docker start ID
+
+//colocar porta
+docker run -d -p 80:80 IMAGE
+
+//renomear imagem
+docker run -d -p 80:80 --name novonome IMAGE
+
+//log
+docker logs NAME
+
+//remove container
+docker rm NAME
+
+/**/
+
+//Criar imagem
+//cria arquivo Dockerfile
+npm init -y
+npm install express
+
+criar arquivo index.js
+
+//Depois de gerar o index.js e o Dockerfile efetuar o comando
+docker build .
+
+docker image ls
+
+//copiar o ID
+docker run -p 3000:3000 -d ID
+
+//alterar att projeto
+docker stop hardcore_pare
+
+//altera o index.js
+docker build .
