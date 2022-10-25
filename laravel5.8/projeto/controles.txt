@@ -1,0 +1,3 @@
+//cria index, create, show, store, edit, update, destroy
+php artisan make:controller ClienteControlador --resource
+
