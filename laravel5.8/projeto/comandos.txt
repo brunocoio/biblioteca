@@ -18,3 +18,100 @@ php artisan migrate:reset
 
 //drop nas tabelas (função down)
 php artisan migrate:fresh
+
+//acessar tinker e inserir registro via comando
+php artisan tinker
+
+use \App\Brand;
+Brand::all();
+$brand = new Brand
+$brand->name = "josney"
+$brand->save()
+quit;
+
+//outra opção
+$brand = Brand::create(["name"=>"nome2"])
+
+//consultas no tinker
+//busca id 1
+Brand::find(1)
+
+//busca grupo id
+Brand::find([1,2])
+
+//busca where
+Brand::where('id', 1)->get()
+
+//operadores
+Brand::where('id', '<>', 1)->get()
+
+//intervalo
+Brand::whereBetween('id',[2,3])->get()
+Brand::whereNotBetween('id',[2,3])->get()
+Brand::whereNotIn('id',[2,3])->get()
+Brand::whereIn('id',[2,3])->get()
+
+//like
+Brand::where('name', 'like', '%y%')->get()
+
+//encadeamento
+Brand::where('id', '>=', 1)->where('name', 'josney')->get()
+Brand::where('id', '>=', 1)->orwhere('name', 'josney')->get()
+
+//agrupamento de query
+Brand::where('id', '>=', 1)->where('id', '<', 4)->get()
+
+Brand::
+where(
+    function($query){
+        $query->where('id', '>', 1)->where('id', <, 4);
+    }
+)->
+where(
+    function($query){
+        $query->where('name', 'a')->orWhere('name', 'b');
+    }
+)->get()
+
+//ordenação
+Brand::orderBy('name')->get()
+Brand::orderBy('name', 'desc')->get()
+Brand::where('id', '>', 1)->orderBy('name', 'desc')->get()
+
+//collection - digging deeper
+Brand::all()->first()
+Brand::all()->last()
+Brand::all()->reverse()
+Brand::all()->pluck('name')
+Brand::all()->random()
+
+Brand::all()->pluck('name')->first()
+Brand::all()->pluck('name')->toArray()
+Brand::all()->pluck('name')->toJson()
+Brand::all()->toJson()
+
+Brand::all()->avg('id')
+Brand::all()->max('id')
+Brand::all()->min('id')
+Brand::all()->sum('id')
+Brand::all()->chunk(2) //agrupa em blocos tipo paginação
+
+//atualização de registros
+$brand = Brand::find(1)
+$brand->name = "Valdisnei"
+$brand->save()
+
+$brand->fill(['name'=>'josnei'])
+
+Brand::where('id', '=', 1)->update(['name'=>'zé roela'])
+
+//excluindo registros
+$brand->delete()//apaga ultimo
+Brand::destroy(2)
+Brand::where('id', '=', 2)->get()
+Brand::where('id', '>', 2)->delete()
+
+//soft delete
+$brands[0]->delete()
+Brand::withTrashed()->get() //all + excluido
+
