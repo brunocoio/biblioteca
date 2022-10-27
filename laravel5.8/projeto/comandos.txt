@@ -6,3 +6,15 @@ php artisan preset bootstrap
 
 npm install
 npm run dev
+
+//alterando tabelas
+php artisan make:migration add_brand_to_products --table=add_brand_to_products
+
+//apaga e insere tabelas
+php artisan migrate:refresh
+
+//apaga tudo
+php artisan migrate:reset
+
+//drop nas tabelas (função down)
+php artisan migrate:fresh
