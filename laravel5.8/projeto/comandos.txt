@@ -1,3 +1,8 @@
 //cria index, create, show, store, edit, update, destroy
 php artisan make:controller ClienteControlador --resource
 
+//template bootstrap
+php artisan preset bootstrap
+
+npm install
+npm run dev
